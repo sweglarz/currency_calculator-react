@@ -1,8 +1,11 @@
 
-const Result = (props) => (
+const Result = ({ result }) => (
     <p className="form__paragraph">
-        Otrzymasz: <strong className="form__result"></strong>
+        {result !== undefined && (
+            <>
+                Otrzymasz: <strong className="form__result">{(result.afterConversion.toFixed(2))}&nbsp;{result.currency}</strong>
+            </>
+        )}
     </p>
 )
-
 export default Result;
