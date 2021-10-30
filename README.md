@@ -3,7 +3,7 @@
 ## Description 
 Do you need to exchange currency? Use this calculator and see how much you can get!
 
-##Technologies 
+## Technologies 
 - HTML, 
 - ES6,
 - BEM Methodology, 
