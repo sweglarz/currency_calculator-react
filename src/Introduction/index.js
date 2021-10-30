@@ -1,3 +1,5 @@
+import "./style.css"
+
 const Introduction = (props) => (
     <>
         <legend className="form__legend">Kalkulator Walut</legend>
