@@ -1,9 +1,11 @@
+import "./style.css"
 
 const Result = ({ result }) => (
     <p className="form__paragraph">
+        Otrzymasz:&nbsp;
         {result !== undefined && (
             <>
-                Otrzymasz: <strong className="form__result">{(result.afterConversion.toFixed(2))}&nbsp;{result.currency}</strong>
+                <strong className="form__result">{(result.afterConversion.toFixed(2))}&nbsp;{result.currency}</strong>
             </>
         )}
     </p>
