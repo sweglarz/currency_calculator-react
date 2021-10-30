@@ -1,0 +1,10 @@
+.form__paragraph {
+    color: #fff;
+    
+}
+
+.form__paragraph--information {
+    text-decoration: underline;
+    font-weight: 700;
+    margin: 20px 0 40px 0;
+}
