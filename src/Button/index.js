@@ -1,7 +1,7 @@
-const Button = (props) => (
+const Button = () => (
     <button className="form__button">
-            Przelicz
-        </button>
+        Przelicz
+    </button>
 )
 
 export default Button;
