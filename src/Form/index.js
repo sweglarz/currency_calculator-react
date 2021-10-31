@@ -6,14 +6,14 @@ import { useState } from "react"
 import { currencies } from "../currencies"
 
 const Form = ({ calculateResult, result }) => {
-
     const [amount, setAmount] = useState("");
     const [currency, setCurrency] = useState(currencies[0].summary)
 
     const onFormSubmit = (event) => {
         event.preventDefault()
         calculateResult(amount, currency)
-    }
+    };
+
     return (
         <form className="form" onSubmit={onFormSubmit}>
             <fieldset className="form__fieldset">
@@ -59,5 +59,6 @@ const Form = ({ calculateResult, result }) => {
             </fieldset>
         </form>
     )
-}
+};
+
 export default Form;

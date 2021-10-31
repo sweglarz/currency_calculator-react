@@ -1,6 +1,6 @@
 import "./style.css"
 
-const Header = (props) => (
+const Header = () => (
     <h1 className="heading">Internetowy kantor wymiany walut</h1> 
 )
 
