@@ -1,9 +1,11 @@
 import "./style.css"
+import Clock from "../Clock"
 
-const Introduction = (props) => (
+
+const Introduction = () => (
     <>
         <legend className="form__legend">Kalkulator Walut</legend>
-        <p className="form__paragraph form__paragraph--information">Pola oznaczone * są wymagane</p>
+        <Clock/>
     </>
 )
 
