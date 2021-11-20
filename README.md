@@ -6,7 +6,7 @@ Do you need to exchange currency? Use this calculator and see how much you can g
 ## Technologies 
 - HTML, 
 - ES6,
-- BEM Methodology, 
+- Styled Components,
 - React.js, 
 - Create-React-App, 
 - Babel, 
