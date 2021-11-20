@@ -1,14 +1,14 @@
-import "./style.css"
+import { ResultElement } from "./styled";
 
 const Result = ({ result }) => (
-    <p className="form__paragraph">
+    <ResultElement>
         Otrzymasz:&nbsp;
         {result !== undefined && (
             <>
                 <strong className="form__result">{(result.afterConversion.toFixed(2))}&nbsp;{result.currency}</strong>
             </>
         )}
-    </p>
+    </ResultElement>
 );
 
 export default Result;

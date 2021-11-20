@@ -1,7 +1,7 @@
-import "./style.css"
+import { Title } from "./styled";
 
 const Header = () => (
-    <h1 className="heading">Internetowy kantor wymiany walut</h1> 
+    <Title>Internetowy kantor wymiany walut</Title> 
 )
 
 export default Header;

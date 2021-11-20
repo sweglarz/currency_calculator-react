@@ -1,7 +1,7 @@
-import "./style.css"
+import { FormElement, FormFieldset, FormLegend, FormParagraph, FormSpan, FormInput, FormSelect } from "./styled"
 import Button from "../Button"
 import Result from "../Result"
-import Introduction from "../Introduction"
+import Clock from "../Clock"
 import { useState } from "react"
 import { currencies } from "../currencies"
 
@@ -15,31 +15,33 @@ const Form = ({ calculateResult, result }) => {
     };
 
     return (
-        <form className="form" onSubmit={onFormSubmit}>
-            <fieldset className="form__fieldset">
-                <Introduction />
-                <p className="form__paragraph">
-                    <label className="form__label">
-                        <span className="form__labelText">
+        <FormElement onSubmit={onFormSubmit}>
+            <FormFieldset>
+            <>
+            <FormLegend>Kalkulator Walut</FormLegend>
+            <Clock/>
+            </>
+                <FormParagraph>
+                    <label>
+                        <FormSpan>
                             Podaj kwotę w PLN*:
-                        </span>
-                        <input
+                        </FormSpan>
+                        <FormInput
                             value={amount}
                             onChange={({ target }) => setAmount(target.value)}
-                            className="form__field"
                             type="number"
                             min="1"
                             step="1"
                             required
                             placeholder="Podaj kwotę" />
                     </label>
-                </p>
-                <p className="form__paragraph">
-                    <label className="form__label">
-                        <span className="form__labelText">
+                </FormParagraph>
+                <FormParagraph>
+                    <label>
+                        <FormSpan>
                             Wymieniam na:
-                        </span>
-                        <select className="form__field"
+                        </FormSpan>
+                        <FormSelect
                             value={currency}
                             onChange={({ target }) => setCurrency(target.value)}
                         >
@@ -51,13 +53,13 @@ const Form = ({ calculateResult, result }) => {
                                     {currency.name}
                                 </option>
                             )))};
-                        </select>
+                        </FormSelect>
                     </label>
-                </p>
+                </FormParagraph>
                 <Button />
                 <Result result={result} />
-            </fieldset>
-        </form>
+            </FormFieldset>
+        </FormElement>
     )
 };
 
