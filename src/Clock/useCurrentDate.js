@@ -11,7 +11,7 @@ export const useCurrentDate = () => {
         return () => {
             clearInterval(intervalId)
         }
-    });
+    }, []);
 
     const actualDate = `${date.toLocaleString(undefined,
         {
