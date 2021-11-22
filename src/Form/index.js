@@ -1,4 +1,4 @@
-import { FormElement, FormFieldset, FormLegend, FormParagraph, FormSpan, FormInput, FormSelect } from "./styled"
+import { FormElement, FormFieldset, FormLegend, FormParagraph, FormSpan, FormInput } from "./styled"
 import Button from "../Button"
 import Result from "../Result"
 import Clock from "../Clock"
@@ -17,10 +17,10 @@ const Form = ({ calculateResult, result }) => {
     return (
         <FormElement onSubmit={onFormSubmit}>
             <FormFieldset>
-            <>
-            <FormLegend>Kalkulator Walut</FormLegend>
-            <Clock/>
-            </>
+                <>
+                    <FormLegend>Kalkulator Walut</FormLegend>
+                    <Clock />
+                </>
                 <FormParagraph>
                     <label>
                         <FormSpan>
@@ -41,7 +41,8 @@ const Form = ({ calculateResult, result }) => {
                         <FormSpan>
                             Wymieniam na:
                         </FormSpan>
-                        <FormSelect
+                        <FormInput
+                            as="select"
                             value={currency}
                             onChange={({ target }) => setCurrency(target.value)}
                         >
@@ -53,7 +54,7 @@ const Form = ({ calculateResult, result }) => {
                                     {currency.name}
                                 </option>
                             )))};
-                        </FormSelect>
+                        </FormInput>
                     </label>
                 </FormParagraph>
                 <Button />

@@ -39,13 +39,3 @@ export const FormInput = styled.input`
         min-width: 100%;
     }
 `
-
-export const FormSelect = styled.select`
-    max-width: 200px;
-    width: 100%;
-    padding: 7px;
-
-    @media(max-width: 550px){
-        min-width: 100%;
-    }
-`
