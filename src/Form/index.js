@@ -1,5 +1,4 @@
-import { FormElement, FormFieldset, FormLegend, FormParagraph, FormSpan, FormInput } from "./styled"
-import Button from "../Button"
+import { FormElement, FormFieldset, FormLegend, FormParagraph, FormSpan, FormInput, FormButton } from "./styled"
 import Result from "../Result"
 import Clock from "../Clock"
 import { useState } from "react"
@@ -57,7 +56,9 @@ const Form = ({ calculateResult, result }) => {
                         </FormInput>
                     </label>
                 </FormParagraph>
-                <Button />
+                <FormButton>
+                    Przelicz
+                </FormButton>
                 <Result result={result} />
             </FormFieldset>
         </FormElement>
