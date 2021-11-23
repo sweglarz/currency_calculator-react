@@ -1,4 +1,4 @@
-import { ClockElement } from "./styled";
+import { StyledClock } from "./styled";
 import { useCurrentDate } from "./useCurrentDate";
 
 const actualDate = (date) => `${date.toLocaleString(undefined,
@@ -16,7 +16,7 @@ const Clock = () => {
     const date = useCurrentDate();
     
     return (
-        <ClockElement>Dzisiaj jest {actualDate(date)}</ClockElement>
+        <StyledClock>Dzisiaj jest {actualDate(date)}</StyledClock>
     )
 };
 

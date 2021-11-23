@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ClockElement = styled.p`
+export const StyledClock = styled.p`
     font-family: 'Space Mono', monospace;
     color: #fff;
     font-size: 14px;
@@ -9,5 +9,5 @@ export const ClockElement = styled.p`
 
     @media (max-width: 550px){
         text-align: center
-    }
-`
+    };
+`;
