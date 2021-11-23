@@ -16,10 +16,10 @@ const Form = ({ calculateResult, result }) => {
     return (
         <FormElement onSubmit={onFormSubmit}>
             <FormFieldset>
-                <>
-                    <FormLegend>Kalkulator Walut</FormLegend>
+                    <FormLegend>
+                        Kalkulator Walut
+                    </FormLegend>
                     <Clock />
-                </>
                 <FormParagraph>
                     <label>
                         <FormSpan>
