@@ -1,8 +1,22 @@
-import { FormElement, FormFieldset, FormLegend, FormParagraph, FormSpan, FormInput, FormButton } from "./styled";
+import {
+    FormElement,
+    FormFieldset,
+    FormLegend,
+    FormParagraph,
+    FormSpan,
+    FormInput,
+    FormButton,
+    LoadingSpinner,
+    LoadingText,
+    StyledInformationText,
+    ErrorText,
+    ErrorImage
+} from "./styled";
 import Result from "../Result";
 import Clock from "../Clock";
 import { useState } from "react";
 import { useCurrencies } from "../useCurrencies";
+import errorImage from "../Images/problem-solved.png";
 
 const Form = () => {
     const currencyData = useCurrencies();
@@ -33,11 +47,18 @@ const Form = () => {
                 <Clock />
                 {currencyData.state === "loading"
                     ? (
-                        <p>Moment, ładujemy obecne kursy :)</p>
+                        <>
+                            <LoadingText>Daj nam chwilę, poberamy dla Ciebie najświeższe kursy walut &#128521; </LoadingText>
+                            <LoadingSpinner></LoadingSpinner>
+                        </>
+
                     )
                     : (currencyData.state === "error"
                         ? (
-                            <p>Ups.. coś poszło nie tak, spróbuj ponownie!</p>
+                            <>
+                                <ErrorText>Ups... Coś poszło nie tak, spróbuj ponownie później!</ErrorText>
+                                <ErrorImage src={errorImage} alt="Error" />
+                           </>
                         )
                         : (<>
                             <FormParagraph>
@@ -78,13 +99,14 @@ const Form = () => {
                             </FormParagraph>
                         </>
                         ))
-                };
+                }
                 <FormButton>
                     Przelicz
                 </FormButton>
                 <Result result={result} />
+                <StyledInformationText>Kursy walut pobierane są z Europejskiego Banku Centralnego.</StyledInformationText>
+                <StyledInformationText>Aktualne na dzień: <strong>{currencyData.date}</strong></StyledInformationText>
             </FormFieldset>
-
         </FormElement>
     );
 };
