@@ -6,11 +6,11 @@ html {
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: 'Nunito', sans-serif;
-  }
+  };
   
   *, ::after, ::before {
     box-sizing: inherit;
-  }
+  };
   
   body{
     margin: 0 auto;
@@ -20,5 +20,5 @@ html {
     background-image: url("${background}");
     background-position: center;
     background-size: cover;
-  }
-`
+  };
+`;

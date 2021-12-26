@@ -39,7 +39,6 @@ const Form = () => {
 
     return (
         <FormElement onSubmit={onFormSubmit}>
-
             <FormFieldset>
                 <FormLegend>
                     Kalkulator Walut
@@ -51,53 +50,53 @@ const Form = () => {
                             <LoadingText>Daj nam chwilę, poberamy dla Ciebie najświeższe kursy walut &#128521; </LoadingText>
                             <LoadingSpinner></LoadingSpinner>
                         </>
-
                     )
                     : (currencyData.state === "error"
                         ? (
                             <>
                                 <ErrorText>Ups... Coś poszło nie tak, spróbuj ponownie później!</ErrorText>
                                 <ErrorImage src={errorImage} alt="Error" />
-                           </>
+                            </>
                         )
-                        : (<>
-                            <FormParagraph>
-                                <label>
-                                    <FormSpan>
-                                        Podaj kwotę w PLN*:
-                                    </FormSpan>
-                                    <FormInput
-                                        value={amount}
-                                        onChange={({ target }) => setAmount(target.value)}
-                                        type="number"
-                                        min="1"
-                                        step="1"
-                                        required
-                                        placeholder="Podaj kwotę" />
-                                </label>
-                            </FormParagraph>
-                            <FormParagraph>
-                                <label>
-                                    <FormSpan>
-                                        Wymieniam na:
-                                    </FormSpan>
-                                    <FormInput
-                                        as="select"
-                                        value={currency}
-                                        onChange={({ target }) => setCurrency(target.value)}
-                                    >
-                                        {!!currencyData.rates && Object.keys(currencyData.rates).map((currency => (
-                                            <option
-                                                key={currency}
-                                                value={currency}
-                                            >
-                                                {currency}
-                                            </option>
-                                        )))}
-                                    </FormInput>
-                                </label>
-                            </FormParagraph>
-                        </>
+                        : (
+                            <>
+                                <FormParagraph>
+                                    <label>
+                                        <FormSpan>
+                                            Podaj kwotę w PLN*:
+                                        </FormSpan>
+                                        <FormInput
+                                            value={amount}
+                                            onChange={({ target }) => setAmount(target.value)}
+                                            type="number"
+                                            min="1"
+                                            step="1"
+                                            required
+                                            placeholder="Podaj kwotę" />
+                                    </label>
+                                </FormParagraph>
+                                <FormParagraph>
+                                    <label>
+                                        <FormSpan>
+                                            Wymieniam na:
+                                        </FormSpan>
+                                        <FormInput
+                                            as="select"
+                                            value={currency}
+                                            onChange={({ target }) => setCurrency(target.value)}
+                                        >
+                                            {!!currencyData.rates && Object.keys(currencyData.rates).map((currency => (
+                                                <option
+                                                    key={currency}
+                                                    value={currency}
+                                                >
+                                                    {currency}
+                                                </option>
+                                            )))}
+                                        </FormInput>
+                                    </label>
+                                </FormParagraph>
+                            </>
                         ))
                 }
                 <FormButton>

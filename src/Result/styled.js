@@ -5,4 +5,4 @@ export const ResultElement = styled.p`
     margin-bottom: 30px;
     font-size: 18px;
     color: #fff;
-`
+`;

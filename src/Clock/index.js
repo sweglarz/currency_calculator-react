@@ -14,7 +14,6 @@ const actualDate = (date) => `${date.toLocaleString(undefined,
 
 const Clock = () => {
     const date = useCurrentDate();
-    
     return (
         <StyledClock>Dzisiaj jest {actualDate(date)}</StyledClock>
     )
