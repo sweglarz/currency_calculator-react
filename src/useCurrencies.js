@@ -22,7 +22,7 @@ export const useCurrencies = () => {
                 });
             };
         };
-        setTimeout(getRates, 1500);
+        setTimeout(getRates, 2000);
     }, []);
  
     return currencyData;
