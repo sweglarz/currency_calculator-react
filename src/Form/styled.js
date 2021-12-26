@@ -57,3 +57,41 @@ export const FormButton = styled.button`
         background-color: #f29f28;
     }
 `
+export const LoadingText = styled.p`
+    text-align: center;
+    color: #fff;
+`
+export const LoadingSpinner = styled.div`
+    display: flex;
+    justify-content: center;
+    &::after{
+        content: "";
+        width: 60px;
+        height: 60px;
+        border: 8px solid #ddd;
+        border-top-color: #e08e16;
+        border-radius: 50%;
+        animation: LoadingSpinner 1s linear infinite;
+    }
+    @keyframes LoadingSpinner {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+`
+export const StyledInformationText = styled(LoadingText)`
+    font-size: 14px;
+    margin: 0;
+`
+export const ErrorText = styled(LoadingText)`
+    margin: 0;
+    font-size: 18px;
+    color: #EA2027;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000;
+`
+export const ErrorImage = styled.img`
+    display: block;
+    margin: 20px auto;
+    width: 64px;
+`
