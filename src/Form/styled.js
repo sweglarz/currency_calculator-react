@@ -5,7 +5,7 @@ export const FormElement = styled.form`
     margin: 0 auto;
 `;
 export const FormFieldset = styled.fieldset`
-    background-color: rgba(0, 0, 0, 0.700);
+    background-color: rgba(0, 0, 0, 0.900);
     border: none;
     border-radius: 5px;
     padding: 15px 40px;
