@@ -2,10 +2,11 @@
 
 ## Description 
 Do you need to exchange currency? Use this calculator and see how much you can get!
+
 Click and use => [Start Demo](https://sweglarz.github.io/currency_calculator-react/)
 
 Look below how it works: 
-[Currency Calculator](https://github.com/sweglarz/currency_calculator-react/blob/main/src/Images/calculator.gif?raw=true)
+![Currency Calculator](https://github.com/sweglarz/currency_calculator-react/blob/main/src/Images/calculator.gif?raw=true)
 
 ## Technologies 
 - HTML, 
